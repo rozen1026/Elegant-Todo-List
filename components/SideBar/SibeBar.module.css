@@ -1,0 +1,12 @@
+.sideBar {
+  padding: 20px 0;
+  height: calc(100vh - 40px);
+  width: 400px;
+  background: rgb(206, 126, 230);
+  background: linear-gradient(
+    45deg,
+    rgba(206, 126, 230, 1) 0%,
+    rgba(103, 169, 243, 1) 74%,
+    rgba(0, 212, 255, 1) 100%
+  );
+}
