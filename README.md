@@ -1,4 +1,4 @@
-Simple but attractive Todo List
+#Simple but attractive Todo List
 
 How to install
 1. git clone (repo)
