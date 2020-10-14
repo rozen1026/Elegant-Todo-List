@@ -1,5 +1,5 @@
+import React from "react";
 import Head from "next/head";
-import styles from "../styles/index.module.css";
 import MainView from "../components/MainView/MainView";
 
 export default function Home() {
@@ -14,6 +14,7 @@ export default function Home() {
           rel="stylesheet"
         ></link>
       </Head>
+
       <MainView />
     </div>
   );

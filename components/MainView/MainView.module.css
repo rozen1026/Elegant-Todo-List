@@ -2,3 +2,9 @@
   width: 100vw;
   height: 100vh;
 }
+.modalButtonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
