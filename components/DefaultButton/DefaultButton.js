@@ -1,7 +1,7 @@
 import React from "react";
 import styles from "./DefaultButton.module.css";
 
-const DefaultButton = ({ style, buttonName }) => {
+const DefaultButton = ({ style, buttonName, click }) => {
   function buttonStyle(style) {
     switch (style) {
       case "default":
@@ -12,7 +12,10 @@ const DefaultButton = ({ style, buttonName }) => {
   }
 
   return (
-    <button className={`${styles.button} ${buttonStyle(style)}`}>
+    <button
+      className={`${styles.button} ${buttonStyle(style)}`}
+      onClick={click}
+    >
       {buttonName}
     </button>
   );

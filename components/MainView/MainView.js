@@ -14,7 +14,7 @@ const MainView = () => {
   const ModalButtons = () => {
     return (
       <div className={styles.modalButtonContainer}>
-        <DefaultButton buttonName="cancel" />
+        <DefaultButton buttonName="cancel" click={toggleModal} />
         <DefaultButton style="default" buttonName="Add Todo" />
       </div>
     );
