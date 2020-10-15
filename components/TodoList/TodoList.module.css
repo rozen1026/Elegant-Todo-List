@@ -1,0 +1,16 @@
+.todoListContainer {
+  color: var(--color-white);
+  margin-top: 20px;
+}
+.todoItem {
+  padding: 15px 20px;
+  cursor: pointer;
+}
+.todoItem:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+.title {
+  font-size: 18px;
+  font-weight: 600;
+  padding: 15px 20px;
+}

@@ -10,3 +10,14 @@
     rgba(0, 212, 255, 1) 100%
   );
 }
+.appTitle {
+  font-size: 28px;
+  font-weight: 600;
+  color: var(--color-white);
+}
+.topSection {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}

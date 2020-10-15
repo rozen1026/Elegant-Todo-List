@@ -2,33 +2,38 @@ import React, { useState } from "react";
 import styles from "./MainView.module.css";
 import SibeBar from "../SideBar/SideBar";
 import Modal from "../Modal/Modal";
-import DefaultButton from "../DefaultButton/DefaultButton";
+import CreateTodoForm from "../CreateTodoForm/CreateTodoForm";
+import Notification from "../Notification/Notification";
 
 const MainView = () => {
   const [addTodoModalOpen, setAddTodoModalOpen] = useState(false);
+  const [openNotif, setOpenNotif] = useState(false);
 
   function toggleModal() {
     setAddTodoModalOpen(!addTodoModalOpen);
   }
 
-  const ModalButtons = () => {
-    return (
-      <div className={styles.modalButtonContainer}>
-        <DefaultButton buttonName="cancel" click={toggleModal} />
-        <DefaultButton style="default" buttonName="Add Todo" />
-      </div>
-    );
-  };
+  function showNotif() {
+    setOpenNotif(true);
+    setTimeout(function () {
+      setOpenNotif(false);
+    }, 2000);
+  }
 
   const AddTodoModal = (
     <Modal title="Create New Todo">
-      awoeawe
-      <ModalButtons />
+      <CreateTodoForm closeModal={toggleModal} notification={showNotif} />
     </Modal>
   );
 
   return (
     <>
+      {openNotif && (
+        <Notification
+          title="Success!!"
+          message="Created a todo successfully!!!"
+        />
+      )}
       {addTodoModalOpen && AddTodoModal}
       <div className={styles.todoContainer}>
         <SibeBar openAddTodoModal={toggleModal} />

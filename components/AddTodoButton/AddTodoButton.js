@@ -5,7 +5,6 @@ import { FaPlus } from "react-icons/fa";
 const AddTodoButton = ({ openAddTodoModal }) => {
   return (
     <div className={styles.buttonContainer} onClick={openAddTodoModal}>
-      <p className={styles.buttonText}>Add New Todo</p>
       <p className={styles.icon}>
         <FaPlus />
       </p>
